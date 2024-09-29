@@ -5,6 +5,7 @@ import { uploadBytes } from 'firebase/storage'
 import React from 'react'
 
 export const createNewAuthor = async({data,image}) => {
+    console.log(data)
     if(!data?.name){
         throw new Error("Name is required")
     }

@@ -11,7 +11,7 @@ const Sidebar = () => {
         },
         {
             name: 'Posts',
-            link: '/admin/blogs',
+            link: '/admin/posts',
             icon: <StickyNote />
         },
         {
