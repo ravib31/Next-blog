@@ -15,7 +15,7 @@ const LoginButton = () => {
         onClick={() => {handleLogout()}}
         className={buttonStyle}
       >
-        <img src={user?.photoURL} alt="google" className=" h-6 rounded-full" />
+        <img src={user?.photoURL} alt="userImage" className=" h-6 rounded-full border-2" />
         Logout
       </button>
     );
