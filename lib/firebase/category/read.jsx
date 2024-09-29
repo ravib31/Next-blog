@@ -1,6 +1,7 @@
 'use client'
+import { doc } from 'firebase/firestore';
 import { db } from '@/lib/firebase';
-import { collection, onSnapshot } from 'firebase/firestore'
+import { collection, getDoc, onSnapshot } from 'firebase/firestore'
 import useSWRSubscription from 'swr/subscription'
 
 function UseCategories() {
@@ -21,4 +22,7 @@ function UseCategories() {
   }
 }
 
-export default UseCategories
+export const getCategory = async (id)=>{
+    return await getDoc(doc(db,`categories/${id}`));
+}
+export default UseCategories;
