@@ -2,24 +2,27 @@ import { Contact, House, Logs } from "lucide-react";
 import React from "react";
 import LoginButton from "./LoginButton";
 import AuthContextProvider from "@/lib/context/AuthContext";
+import Link from "next/link";
 
 const Header = () => {
   const liStyle = "flex items-center gap-2";
   return (
     <div className=" flex justify-between px-7 py-3 border-b-2 bg-lime-100">
+        <Link href='/'>
       <img src="/logo.svg" alt="logo" className="w-16 h-10" />
+        </Link>
       <ul className="flex gap-6 items-center">
         <li className={liStyle}>
           <House />
-          Home
+          {/* Home */}
         </li>
         <li className={liStyle}>
           <Logs />
-          Blogs
+          {/* Blogs */}
         </li>
         <li className={liStyle}>
           <Contact />
-          Contact us
+          {/* Contact us */}
         </li>
       </ul>
       <AuthContextProvider>
