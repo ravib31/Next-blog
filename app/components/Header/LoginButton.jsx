@@ -6,7 +6,7 @@ import React from "react";
 const LoginButton = () => {
   const { user, isLoading, error, handleLogin, handleLogout } = useAuth();
   const buttonStyle = "bg-black text-white px-4 py-2 rounded-full flex items-center gap-3"
-//   console.log(user)
+  // console.log(user?.photoURL)
   if(isLoading){
     return <h1>Loading...</h1>
   }
@@ -22,7 +22,7 @@ const LoginButton = () => {
       </button>
       <Link href='/admin'>
        <div className='px-3 py-2'>
-       <img src={user?.photoURL} alt="userImage" className=" h-10 rounded-full border-2" />
+       <img src={user?.photoURL} alt="user" className=" h-10 rounded-full border-2" />
        </div>
       </Link>
       </div>

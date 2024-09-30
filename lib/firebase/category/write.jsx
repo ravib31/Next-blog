@@ -5,8 +5,8 @@ import { uploadBytes } from 'firebase/storage'
 import React from 'react'
 
 export const createNewCategory = async({data,image}) => {
-    console.log(data)
-    console.log(image)
+    // console.log(data)
+    // console.log(image)
     if(!data?.name){
         throw new Error("Name is required")
     }

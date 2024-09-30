@@ -7,23 +7,29 @@ import Link from "next/link";
 const Header = () => {
   const liStyle = "flex items-center gap-2";
   return (
-    <div className=" flex justify-between px-7 py-3 border-b-2 bg-lime-100">
+    <div className=" flex justify-between px-7 py-3 border-b-2 bg-lime-200">
         <Link href='/'>
       <img src="/logo.svg" alt="logo" className="w-16 h-10" />
         </Link>
-      <ul className="flex gap-6 items-center">
+      <ul className="flex gap-10 items-center font-bold">
+        <Link href={'/'}>
         <li className={liStyle}>
-          <House />
-          {/* Home */}
+          {/* <House /> */}
+          Home
         </li>
+        </Link>
+        <Link href={'/categories'}>
         <li className={liStyle}>
-          <Logs />
-          {/* Blogs */}
+          {/* <Logs /> */}
+          Category
         </li>
+        </Link>
+        <Link href={'/'}>
         <li className={liStyle}>
-          <Contact />
-          {/* Contact us */}
+          {/* <Contact /> */}
+          Contact us
         </li>
+        </Link>
       </ul>
       <AuthContextProvider>
         <LoginButton />

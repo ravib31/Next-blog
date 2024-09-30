@@ -22,7 +22,7 @@ function UsePosts() {
   }
 }
 
-export const getpost = async (id)=>{
+export const getPost = async (id)=>{
     return await getDoc(doc(db,`posts/${id}`));
 }
 export default UsePosts;

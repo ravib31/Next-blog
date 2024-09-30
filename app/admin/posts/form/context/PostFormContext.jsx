@@ -1,7 +1,7 @@
 "use client";
 
 
-import { getpost } from "@/lib/firebase/post/read";
+import { getPost, getpost } from "@/lib/firebase/post/read";
 import { createNewPost, deletePost, updatePost } from "@/lib/firebase/post/write";
 import { useRouter, useSearchParams } from "next/navigation";
 import { createContext, useContext, useState } from "react";
@@ -64,7 +64,7 @@ export default function PostFormContextProvider({ children }) {
     setIsLoading(true);
     setIsSuccess(false);
     try {
-      const res = await getpost(id);
+      const res = await getPost(id);
       if(res.exists()){
         setData(res.data());
       }
